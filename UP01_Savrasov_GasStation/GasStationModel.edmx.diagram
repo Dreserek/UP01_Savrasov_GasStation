@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4a1733d75e04c4ebf64f3bdf3d94128" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Customers" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Deliveries" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.FuelTypes" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.PaymentMethods" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Pumps" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.SaleItems" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Sales" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Services" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Suppliers" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Tanks" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Savrasov_GasStationModel.Users" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Sales__CustomerI__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Deliverie__Suppl__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Deliverie__TankI__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__SaleItems__FuelT__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Tanks__FuelTypeI__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Sales__PaymentMe__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Pumps__TankID__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__SaleItems__SaleI__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__SaleItems__Servi__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Savrasov_GasStationModel.FK__Sales__UserID__5629CD9C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="UP01_Savrasov_GasStation.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Личный кабинет (Кассир)" Height="600" Width="1000" Foreground="{DynamicResource TextColorBrush}">
+    <Grid Background="{DynamicResource BackgroundBrush}" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель фильтров и кнопка создания чека -->
+        <Grid Margin="0,10,0,10">
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Сортировка:" VerticalAlignment="Center" Width="102"/>
+                <ComboBox x:Name="CbSort" SelectedIndex="0" SelectionChanged="FilterChanged" Width="145" Height="28">
+                    <ComboBoxItem Content="По дате (убыв)"/>
+                    <ComboBoxItem Content="По дате (возр)"/>
+                </ComboBox>
+            </WrapPanel>
+
+            <Button Content="Оформить продажу (Пробить чек)" Click="BtnMakeSale_Click" 
+                    HorizontalAlignment="Left" Width="276" Background="{DynamicResource SecondaryColorBrush}" Margin="679,5,0,5"/>
+        </Grid>
+
+        <!-- Таблица с историей чеков -->
+        <DataGrid x:Name="DgSales" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Чека" Binding="{Binding ID}" Width="70"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="*"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalAmount}" Width="*"/>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Users.FIO}" Width="*"/>
+                <DataGridTextColumn Header="Способ оплаты" Binding="{Binding PaymentMethods.Name}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

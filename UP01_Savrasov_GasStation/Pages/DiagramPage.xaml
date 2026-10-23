@@ -1,0 +1,29 @@
+﻿<Page x:Class="UP01_Savrasov_GasStation.Pages.DiagramPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+      xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+      xmlns:ch="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+      Title="Графики и отчеты" Height="600" Width="1000" Foreground="{DynamicResource TextColorBrush}">
+    <Grid Background="{DynamicResource BackgroundBrush}" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Выберите сотрудника:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="CbUsers" DisplayMemberPath="FIO" Width="268" SelectionChanged="UpdateChart" Margin="0,0,15,0"/>
+            <Button Content="Экспорт в Word" Click="BtnExportWord_Click" Width="130" Background="{DynamicResource SecondaryColorBrush}"/>
+            <Button Content="Экспорт в Excel" Click="BtnExportExcel_Click" Width="130" Background="{DynamicResource PrimaryColorBrush}"/>
+        </StackPanel>
+
+        <WindowsFormsHost Grid.Row="1" Margin="10">
+            <ch:Chart x:Name="ChartPayments">
+                <ch:Chart.Legends>
+                    <ch:Legend Docking="Bottom"/>
+                </ch:Chart.Legends>
+            </ch:Chart>
+        </WindowsFormsHost>
+    </Grid>
+</Page>
